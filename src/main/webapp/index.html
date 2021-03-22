@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Just Compare</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="result">Taking you to compare...</div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://justcompare.ue.r.appspot.com/compare",
+                type: "GET",
+                dataType: "JSON",
+                data:JSON.stringify({   }),
+                success: function(data) {
+                    $('#result').append(JSON.stringify(data));
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

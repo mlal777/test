@@ -3,5 +3,4 @@
     <application>compare</application>
     <version>1</version>
     <runtime>java11</runtime>
-    <threadsafe>true</threadsafe>
 </appengine-web-app>

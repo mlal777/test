@@ -4,28 +4,28 @@ inbound_services:
 derived_file_type:
 - java_precompiled
 auto_id_policy: default
+beta_settings:
+  'source_reference': 'https://github.com/mlal777/test.git#d854dca987c29e0d68c03e35d50d06585716b819'
 handlers:
-- url: /
-  script: unused
+- url: (/.*/)
+  static_files: __static__\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
   login: optional
   secure: optional
-- url: /_ah/.*
-  script: unused
+- url: (/)
+  static_files: __static__\1index.html
+  upload: __NOT_USED__
+  require_matching_file: True
   login: optional
   secure: optional
-- url: /rest
-  script: unused
+- url: (/.*)
+  static_files: __static__\1
+  upload: __NOT_USED__
+  require_matching_file: True
   login: optional
   secure: optional
-- url: .*\.jsp
-  script: unused
-  login: optional
-  secure: optional
-- url: /.*/
-  script: unused
-  login: optional
-  secure: optional
-- url: /rest/.*
+- url: /.*
   script: unused
   login: optional
   secure: optional
