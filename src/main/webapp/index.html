@@ -18,11 +18,9 @@
             width: 80%;
             border: 2px solid grey;
             overflow-y:auto;
+            margin-top: 10px;
         }
 
-        #compareform {
-            margin-bottom: 2%;
-        }
 
         form.search input[type=text] {
             padding: 10px;
@@ -61,14 +59,15 @@
         <input type="text" id="input_id" placeholder="Look up..">
         <button type="submit">GO</button>
     </form>
-    <div id="result"></div>
+    <pre><div id="result"></div></pre>
 
     <script>
         $(document).ready(function() {
             $('#compareform').submit(function(event) {
                 event.preventDefault();
-                // submit the form
-                console.log("Clicked submit button");
+
+                $("#result").css({"text-align": "center"});
+                $("#result").html("Please wait, Loading...");
 
                 $.ajax({
                     url: "/compare",
@@ -78,6 +77,7 @@
                         product_url: $("#input_id").val(),
                     },
                     success: function(data) {
+                        $("#result").css({"text-align": "left"});
                         $('#result').html(JSON.stringify(data, null, 2));
                     },
                     error: function(xhr, statusText) { $('#result').html("Server did not return a response."); }
