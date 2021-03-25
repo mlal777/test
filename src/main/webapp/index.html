@@ -78,7 +78,7 @@
                     },
                     success: function(data) {
                         $("#result").css({"text-align": "left"});
-                        $('#result').html(JSON.stringify(data, null, 2));
+                        $('#result').html(data);
                     },
                     error: function(xhr, statusText) { $('#result').html("Server did not return a response."); }
                 });
