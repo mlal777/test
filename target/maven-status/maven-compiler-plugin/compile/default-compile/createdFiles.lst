@@ -1,9 +1,12 @@
+com/app/compare/scoring/Score.class
 com/app/compare/Compare.class
+com/app/compare/ResponseHelper$1.class
 com/app/compare/common/CompareResponse.class
 com/app/compare/common/AxessoProductLookUpDTO.class
 com/app/compare/common/ProductDetail.class
+com/app/compare/common/StringParsers.class
 com/app/compare/common/AmazonProduct.class
 com/app/compare/common/Variation.class
+com/app/compare/ResponseHelper.class
 com/app/compare/common/Review.class
 com/app/compare/common/Currency.class
-com/app/compare/common/ResponseParser.class

@@ -19,9 +19,7 @@ public class AmazonProduct {
     private ArrayList<String> categories;
     private ArrayList<String> imageUrlList;
 
-    public AmazonProduct(String productTitle, String asin) {
-        this.productTitle = productTitle;
-        this.asin = asin;
+    public AmazonProduct() {
     }
 
     // setters
