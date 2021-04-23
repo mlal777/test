@@ -1,127 +1,166 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Just Compare</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style type="text/css">
-        body {
-            font-family: Arial;
-            margin: auto;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-        
-        .div-conatiner {
-            background-color: #eeeeee;
-            margin-bottom: 5px;
-            padding: 5px;
-        }
-
-        .div-conatiner p {
-            margin : 0px;
-        }
-
-        .product {
-            height: 25%;
-            width: 75%;
-        }
-
-        #result {
-            height: 50%;
-            width: 80%;
-            border: 2px solid grey;
-            overflow-y:auto;
-            margin-top: 10px;
-        }
-
-
-        form.search input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
-            float: left;
-            width: 60%;
-            height: 20%;
-            margin: 0 auto;
-            background: #f1f1f1;    
-        }
-
-        form.search button {
-            float: left;
-            width: 20%;
-            height: 20%;
-            padding: 10px;
-            background: #2196F3;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none;
-            cursor: pointer;
-            margin: 0 auto;
-        }
-
-        form.search button:hover {
-            background: #0b7dda;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Cartaygo</title>
+    <!-- Styles-->
+    <link href="./assets/css/fullpage.css" rel="stylesheet">
+    <link href="./assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/vendors/slick/slick.css" rel="stylesheet">
+    <link href="./assets/vendors/slick/slick-theme.css" rel="stylesheet">
+    <link href="./assets/fonts/Icomoon/style.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <!-- Favicon-->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
   </head>
   <body>
-    <h2>Just Compare</h2>
-    <!-- The form -->
-    <form class="search" id="compareform">
-        <input type="text" id="input_id" placeholder="Look up..">
-        <button type="submit">GO</button>
-    </form>
-    <pre><div id="result"></div></pre>
-
-    <script>
-        $(document).ready(function() {
-            $('#compareform').submit(function(event) {
-                event.preventDefault();
-
-                $("#result").css({"text-align": "center"});
-                $("#result").html("Please wait, Loading...");
-
-                $.ajax({
-                    url: "/compare",
-                    type: "GET",
-                    dataType: "JSON",
-                    data: {
-                        product_url: $("#input_id").val(),
-                    },
-                    success: function(data) {
-                        $("#result").empty();
-                        $("#result").css({"text-align": "left"});
-                        if (data.amazonProducts == null) {
-                            $('#result').html("Sorry, we could not find any comparable products to this.");
-                        } else {
-                            var products = data.amazonProducts;
-                            var htmlText = '';
-                            
-                            for (i = 0; i < products.length; i++) {
-                                var product = products[i];
-                                htmlText += '<div class="div-conatiner">';
-                                htmlText += '<p> Product Title: ' + product.productTitle + '</p>';
-                                htmlText += '<p> Asin: ' + product.asin + '</p>';
-                                htmlText += '<p> Categories: ' + product.categories + '</p>';
-                                htmlText += '<p> Reviews count: ' + product.countReview + '</p>';
-                                htmlText += '<p> Manufacturer: ' + product.manufacturer + '</p>';
-                                htmlText += '<p> Price: ' + product.price + '</p>';
-                                htmlText += '<p> Retail Price: ' + product.retailPrice + '</p>';
-                                htmlText += '<p> Product description: ' + product.productDescription + '</p>';
-                                htmlText += '<p> Product rating: ' + product.productRating + '</p>';
-                                htmlText += '<p> Amazon Url: ' + product.amazonUrl + '</p>';
-                                htmlText += '</div>';
-                            }
-                            $('#result').append(htmlText);
-                        }
-                    },
-                    error: function(xhr, statusText) { $('#result').html("Server did not return a response."); }
-                });
-            });
-        });
-    </script>
+    <div class="app">
+      <header>
+        <div class="header-container">
+          <div class="container">
+            <div class="header-section d-flex justify-content-between align-items-center">
+              <div class="header-logo"><a href="index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1845" height="900" viewBox="0 0 3690 1800">
+                    <path class="cls-1" id="Polygon_1" data-name="Polygon 1" d="M1287.23,268.615l304.11,334.341-137.5,430.534-441.61,96.2L708.118,795.346l137.5-430.535Z"></path>
+                    <path class="cls-2" d="M1432.62,1031.18l23.13-20.84,84.64,93.93-23.14,20.85Z"></path>
+                    <path class="cls-2" d="M1497.58,1077.66c74.71-67.32,328.23,128.03,486.09,349.27,122.31,171.41,139.38,280.94,102.1,314.53-37.4,33.7-143.63,3.9-298.5-137.57C1587.15,1421.09,1422.79,1145.04,1497.58,1077.66Z"></path>
+                    <path class="cls-3" d="M1711.31,1311.97c36.91-33.26,146.1,27.76,243.88,136.29s147.13,223.47,110.22,256.72-146.1-27.77-243.88-136.3S1674.4,1345.22,1711.31,1311.97Z"></path>
+                    <path class="cls-2" id="Ellipse_2_copy" data-name="Ellipse 2 copy" d="M1671.29,1285.02c36.9-33.25,146.09,27.77,243.87,136.3s147.14,223.47,110.23,256.72-146.1-27.77-243.88-136.3S1634.38,1318.28,1671.29,1285.02Z"></path>
+                    <path class="cls-2" d="M1267.03,343.8l126.2,137.546-21.99,20.168L1245.05,363.97Z"></path>
+                    <path class="cls-2" id="Rectangle_3_copy" data-name="Rectangle 3 copy" d="M1389.03,476.8l126.2,137.546-21.99,20.168L1367.05,496.97Z"></path>
+                    <path class="cls-2" id="Rectangle_4_copy_3" data-name="Rectangle 4 copy 3" d="M1245.5,349.792l12.41,27.361-36.22,16.1-30.06-30.873Z"></path>
+                    <path class="cls-2" id="Rectangle_4_copy_4" data-name="Rectangle 4 copy 4" d="M1266.07,344.75l10.66,23.513L1245.61,382.1l-25.84-26.53Z"></path>
+                    <path class="cls-2" id="Rectangle_4_copy_5" data-name="Rectangle 4 copy 5" d="M1508.59,635.166l-26.38-14.394-18.72,34.941,28.57,32.249Z"></path>
+                    <path class="cls-2" id="Rectangle_4_copy_6" data-name="Rectangle 4 copy 6" d="M1515.13,615.026l-22.67-12.369-16.09,30.026,24.56,27.712Z"></path>
+                    <text class="cls-4" id="k" transform="translate(368.967 1071.482) scale(16.156)">
+                      <tspan x="0">k</tspan>
+                    </text>
+                    <text class="cls-5" id="m" transform="translate(2216.376 1065.722) scale(4.679)">
+                      <tspan x="0">m</tspan>
+                    </text>
+                    <text class="cls-5" id="b" transform="translate(3221.377 1065.722) scale(4.679)">
+                      <tspan x="0">b</tspan>
+                    </text>
+                  </svg></a></div>
+              <div class="header-menu">
+                <ul class="nav nav-light">
+                  <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Curated Discovery</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Our Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                  <div class="header-button">
+                    <ul class="d-flex align-items-xl-center flex-column flex-xl-row">
+                      <li><a class="notify" href="#"><img src="./assets/images/bell.png" alt="Cartaygo"></a></li>
+                      <li><a class="black btn nobo" href="#">Login</a></li>
+                      <li> <a class="black btn" href="#">Sign Up</a></li>
+                    </ul>
+                  </div>
+                </ul>
+                <div class="mobile-menu"><span></span><span></span><span></span></div>
+                <div class="i-absolute"><a href="#"> <img src="./assets/images/nav-search.png" alt="Cartaygo"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main-content landing-page">
+        <section>
+          <div class="container"> 
+            <div class="standalone-hero">
+              <div class="text">
+                <h1>Let’s Help You Make The Right Choice</h1>
+              </div>
+            </div>
+            <div class="standalone-search"> 
+              <form action="">
+                <div class="d-flex justify-content-center">
+                  <div class="border">
+                    <input type="text" name="" placeholder="Paste the product URL here">
+                  </div>
+                  <button> <span>Search</span><img src="./assets/images/icon-search.png" alt="Cartaygo"></button>
+                </div>
+              </form>
+            </div>
+            <div class="standalone-stage"> 
+              <div class="d-flex justify-content-between flex-column flex-xl-row">
+                <div class="item d-flex flex-row-reverse flex-xl-column align-self-start"> 
+                  <h3>Copy URL </h3>
+                  <div class="number"> 
+                    <p class="satu">1</p>
+                  </div>
+                </div>
+                <div class="item d-flex flex-row-reverse flex-xl-column align-self-start">
+                  <h3>Paste URL </h3>
+                  <div class="number number-two"> 
+                    <p class="dua">2</p>
+                  </div>
+                </div>
+                <div class="item d-flex flex-row-reverse flex-xl-column align-self-start"> 
+                  <h3>Result </h3>
+                  <div class="number number-three">
+                    <p class="tiga">3</p>
+                  </div>
+                </div>
+              </div>
+              <div class="line"></div>
+            </div>
+            <div class="standalone-image">
+              <div class="d-flex justify-content-between flex-column flex-xl-row"><img src="./assets/images/image-1.png" alt="Cartaygo"><img src="./assets/images/image-2.png" alt="Cartaygo"><img src="./assets/images/image-3.png" alt="Cartaygo"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="footer-bg">
+          <div class="container">
+            <div class="box box-1"></div>
+            <div class="box box-2"></div>
+            <div class="box box-3"></div>
+            <div class="box box-4"></div>
+            <div class="box box-5"></div>
+            <div class="logo"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="1845" height="900" viewBox="0 0 3690 1800">
+                <path class="cls-1" id="Polygon_1" data-name="Polygon 1" d="M1287.23,268.615l304.11,334.341-137.5,430.534-441.61,96.2L708.118,795.346l137.5-430.535Z"></path>
+                <path class="cls-2" d="M1432.62,1031.18l23.13-20.84,84.64,93.93-23.14,20.85Z"></path>
+                <path class="cls-2" d="M1497.58,1077.66c74.71-67.32,328.23,128.03,486.09,349.27,122.31,171.41,139.38,280.94,102.1,314.53-37.4,33.7-143.63,3.9-298.5-137.57C1587.15,1421.09,1422.79,1145.04,1497.58,1077.66Z"></path>
+                <path class="cls-3" d="M1711.31,1311.97c36.91-33.26,146.1,27.76,243.88,136.29s147.13,223.47,110.22,256.72-146.1-27.77-243.88-136.3S1674.4,1345.22,1711.31,1311.97Z"></path>
+                <path class="cls-2" id="Ellipse_2_copy" data-name="Ellipse 2 copy" d="M1671.29,1285.02c36.9-33.25,146.09,27.77,243.87,136.3s147.14,223.47,110.23,256.72-146.1-27.77-243.88-136.3S1634.38,1318.28,1671.29,1285.02Z"></path>
+                <path class="cls-2" d="M1267.03,343.8l126.2,137.546-21.99,20.168L1245.05,363.97Z"></path>
+                <path class="cls-2" id="Rectangle_3_copy" data-name="Rectangle 3 copy" d="M1389.03,476.8l126.2,137.546-21.99,20.168L1367.05,496.97Z"></path>
+                <path class="cls-2" id="Rectangle_4_copy_3" data-name="Rectangle 4 copy 3" d="M1245.5,349.792l12.41,27.361-36.22,16.1-30.06-30.873Z"></path>
+                <path class="cls-2" id="Rectangle_4_copy_4" data-name="Rectangle 4 copy 4" d="M1266.07,344.75l10.66,23.513L1245.61,382.1l-25.84-26.53Z"></path>
+                <path class="cls-2" id="Rectangle_4_copy_5" data-name="Rectangle 4 copy 5" d="M1508.59,635.166l-26.38-14.394-18.72,34.941,28.57,32.249Z"></path>
+                <path class="cls-2" id="Rectangle_4_copy_6" data-name="Rectangle 4 copy 6" d="M1515.13,615.026l-22.67-12.369-16.09,30.026,24.56,27.712Z"></path>
+                <text class="cls-4" id="k" transform="translate(368.967 1071.482) scale(16.156)">
+                  <tspan x="0">k</tspan>
+                </text>
+                <text class="cls-5" id="m" transform="translate(2216.376 1065.722) scale(4.679)">
+                  <tspan x="0">m</tspan>
+                </text>
+                <text class="cls-5" id="b" transform="translate(3221.377 1065.722) scale(4.679)">
+                  <tspan x="0">b</tspan>
+                </text>
+              </svg>
+            </div>
+            <div class="link"><a href="#">Currated Discovery </a><a href="#">Search </a><a href="#">Our Blog</a><a href="#">About Us </a></div>
+            <div class="sosmed"> <img src="./assets/images/twitter.png" alt="Cartaygo"><img src="./assets/images/linkedin.png" alt="Cartaygo"><img src="./assets/images/instagram.png" alt="Cartaygo"><img src="./assets/images/facebook.png" alt="Cartaygo"></div>
+            <div class="copyright"> 
+              <p>&copy; 2021 <a href="#">Komb.com</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Scripts-->
+    <script src="./assets/vendors/jquery/jquery.min.js"></script>
+    <script src="./assets/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script src="./assets/vendors/slick/slick.min.js"></script>
+    <script src="./assets/js/fullpage.js"></script>
+    <script src="./assets/js/scripts.min.js"></script>
   </body>
 </html>

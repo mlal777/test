@@ -1,0 +1,648 @@
+.curated-discovery{
+    &-hero{
+        padding-top: 100px;
+        &-left{
+            .text{
+                max-width: 519px;
+                width: 100%;
+                h1{
+                    line-height: 90px;
+                    font-size: 60px;
+                    margin-bottom: 32px;
+                    @media(max-width: $xl){
+                        font-size: 48px;
+                        line-height: 110%;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #757D95;
+                    margin-bottom: 32px;
+                }
+            }
+            .button{
+                button{
+                    background: #FF7322;
+                    box-sizing: border-box;
+                    box-shadow: 0px 20px 50px rgba(43, 45, 51, 0.2);
+                    border-radius: 54px;
+                    @media(max-width: $xl){
+                        width: 100%;
+                        padding: 18px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        &-right{
+            .image{
+                max-width: 580px;
+                @media(max-width: $xl){
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-card{
+        margin-top: 150px;
+        position: relative;
+        @media(max-width: $xl){
+            height: auto;
+            margin-top: 80px;
+        }
+        .bg{
+            background: #FFFFFF;
+            box-shadow: 0px 20px 80px rgba(56, 67, 95, 0.07);
+            border-radius: 16px;
+            width: 790px;
+            height: 457px;
+            position: absolute;
+            z-index: -1;
+            left: 95px;
+            @media(max-width: $xl){
+                display: none;
+            }
+            &-2{
+                left: 115px;
+            }
+            &-3{
+                left: 135px;
+            }
+            &-4{
+                left: 155px;
+            }
+            &-5{
+                left: 175px;
+            }
+        }
+        .item{
+            background: #FFFFFF;
+            box-shadow: 0px 20px 80px rgba(56, 67, 95, 0.07);
+            border-radius: 16px;
+            padding: 100px 0 30px;
+            width: 790px;
+            overflow: hidden;
+            margin-left: 75px;
+            @media(max-width:$xl){
+                width: 320px;
+                margin: 0 auto;
+            }
+            .slick{
+                &-dots{
+                    width: 200px !important;
+                    bottom: -65px;
+                    margin-left: 290px;
+                    @media(max-width:$xl){
+                        bottom: -48px;
+                        margin-left: 40px;
+                    }
+                    li{
+                        width: 8px;
+                        height: 8px;
+                        margin: 0 4px 0 0;
+                        button{
+                            background: rgba(197, 201, 209, 0.6);
+                            border-radius: 10px;
+                            width: 8px;
+                            height: 8px;
+                            opacity: .3;
+                        }
+                    }
+                    li.slick-active button{
+                        background: #FF7322;
+                        width: 20px;
+                        z-index: 99;
+                        margin-right: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+            @media(max-width: $xl){
+                position: relative;
+                width: 100%;
+                margin-left: 0;
+                left: 0 !important;
+                padding: 24px 24px 16px;
+            }
+            .slick-track{
+                padding: 0 !important;
+            }
+            .d-flex{
+                width: 3200px;
+                @media(max-width: $xl){
+                    width: 320px;
+                    margin: 0 auto;
+                }
+                .obj{
+                    width: 790px;
+                    @media(max-width:$xl){
+                        width: 320px;
+                    }
+                    .input{
+                        &-lesm{
+                            margin-top: 70px;
+                            @media(max-width: $xl){
+                                margin-top: 24px;
+                            }
+                            &-2{
+                                margin-top: 30px;
+                            }
+                        }
+                        .select{
+                            border: 1px solid #757D95;
+                            box-sizing: border-box;
+                            border-radius: 8px;
+                            padding: 16px 16px 16px 23px;
+                            width: 335px;
+                            margin: 0 auto;
+                            @media(max-width: $xl){
+                                width: 100%;
+                            }
+                            select{
+                                font-weight: normal;
+                                font-size: 20px;
+                                line-height: 25px;
+                                color: #757D95;
+                                outline: none;
+                                border: none;
+                                outline: none;
+                                width: 100%;
+                                font-family: $poppins;
+                                @media(max-width: $xl){
+                                    font-size: 15px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        .grid{
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            width: 392px;
+                            margin: 0 auto;
+                            align-items: center;
+                            justify-items: center;
+                            @media(max-width: $xl){
+                                width: 300px
+                            }
+                            input{
+                                width: 151px;
+                                font-family: $poppins;
+                                @media(max-width: $xl){
+                                    width: 130px;
+                                }
+                            }
+                            img{
+                                width: 36px;
+                                @media(max-width: $xl){
+                                    width: 24px
+                                }
+                            }
+                            &-2{
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                width: 460px;
+                                grid-column-gap: 60px;
+                                grid-row-gap: 24px;
+                                margin: 0 auto;
+                                @media(max-width: $xl){
+                                    width: 284px;
+                                    grid-column-gap: 24px;
+                                    grid-row-gap: 16px;
+                                }
+                                button{
+                                    padding: 10px;
+                                    font-size: 24px;
+                                    line-height: 36px;
+                                    color: #161F3D;
+                                    font-weight: normal;
+                                    background: transparent;
+                                    border: solid 1px #757D95;
+                                    border-radius: 8px;
+                                    @media(max-width: $xl){
+                                        font-size: 15px;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
+                            &-3{
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                width: 460px;
+                                grid-column-gap: 60px;
+                                grid-row-gap: 24px;
+                                margin: 0 auto;
+                                @media(max-width: $xl){
+                                    width: 284px;
+                                    grid-column-gap: 24px;
+                                    grid-row-gap: 16px;
+                                }
+                                button{
+                                    padding: 5px;
+                                    font-size: 24px;
+                                    line-height: 36px;
+                                    color: #161F3D;
+                                    font-weight: normal;
+                                    background: transparent;
+                                    border: solid 1px #757D95;
+                                    border-radius: 8px;
+                                    text-align: center;
+                                    align-items: center;
+                                    img{
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            h2{
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 28px;
+                color: #161F3D;
+                text-align: center;
+                @media(max-width: $xl){
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 40px;
+                width: 544px;
+                margin: 60px auto 0;
+                text-align: center;
+                @media(max-width: $xl){
+                    width: 100%;
+                    margin-top: 16px;
+                }
+            }
+            .input{
+                text-align: center;
+                width: 590px;
+                margin: 0 auto;
+                margin-top: 90px;
+                @media(max-width: $xl){
+                    width: 100%;
+                    margin-top: 40px;
+                }
+                input{
+                    border: 1px solid #757D95;
+                    border-radius: 8px;
+                    width: 100%;
+                    font-family: $poppins;
+                    font-size: 20px;
+                    line-height: 25px;
+                    padding: 16px 23px;
+                    @media(max-width: $xl){
+                        padding: 10px 16px;
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 50px;
+                margin-top: 0;
+                @media(max-width: $xl){
+                    margin-top: 20px;
+                    padding: 0;
+                }
+                .previous{
+                    button{
+                        background: transparent;
+                        color: #C5C9D1;
+                        opacity: .6;
+                        @media(max-width: $xl){
+                            padding-left: 10px;
+                        }
+                        &:hover{
+                            color: #2B2D33;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .next{
+                    button{
+                        background: #FF7322;
+                        box-shadow: 0px 20px 50px rgba(43, 45, 51, 0.2);
+                        border-radius: 54px;
+                    }
+                }
+            }
+        }
+    }
+    &-quizzes{
+        margin-top: 150px;
+        @media(max-width: $xl){
+            margin-top: 80px;
+        }
+        &-left{
+            .text{
+                max-width: 534px;
+                width: 100%;
+                h1{
+                    line-height: 110%;
+                    font-size: 48px;
+                    margin-bottom: 40px;
+                    @media(max-width: $xl){
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #757D95;
+                }
+            }
+        }
+        &-right{
+            .image{
+                max-width: 450px;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-personalized{
+        margin-top: 150px;
+        position: relative;
+        @media(max-width: $xl){
+            grid-gap: 50px;
+        }
+        &-left{
+            position: relative;
+            .image{
+                position: relative;
+                max-width: 487px;
+                width: 100%;
+                img{
+                    width: 100%;
+                    @media(max-width: $xl){
+                        width: 220px;
+                        height: 220px;
+                    }
+                }
+            }
+            .absolute{
+                position: absolute;
+                top: -100px;
+                display: flex;
+                left: -274px;
+                @media(max-width: $xl){
+                    top: 30px;
+                    left: 120px;
+                }
+                img{
+                    width: 291px;
+                    height: 313px;
+                    top: 0;
+                    margin-right: 24px;
+                    @media(max-width: $xl){
+                        width: 125px;
+                        height: 125px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        &-right{
+            .text{
+                max-width: 520px;
+                width: 100%;
+                h1{
+                    line-height: 110%;
+                    font-size: 48px;
+                    margin-bottom: 40px;
+                    @media(max-width: $xl){
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #757D95;
+                }
+            }
+        }
+    }
+    &-done{
+        margin-top: 150px;
+        margin-bottom: 150px;
+        @media(max-width: $xl){
+            grid-gap: 50px;
+            margin:100px 0;
+        }
+        &-left{
+            .text{
+                max-width: 544px;
+                width: 100%;
+                h1{
+                    line-height: 110%;
+                    font-size: 48px;
+                    margin-bottom: 40px;
+                    @media(max-width: $xl){
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #757D95;
+                }
+            }
+        }
+        &-right{
+            position: relative;
+            margin-left: -50px;
+            left: 120px;
+            @media(max-width: $xl){
+                margin: 0;
+                left: 0;
+            }
+            .image{
+                max-width: 661px;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-result{
+        margin-top: 150px;
+        @media(max-width: $xl){
+            margin-top: 100px;
+        }
+        .text{
+            margin-bottom: 80px;
+            @media(max-width: $xl){
+                margin-bottom: 40px;
+            }
+            h1{
+                font-size: 48px;
+                margin-right: 24px;
+                @media(max-width: $xl){
+                    font-size: 24px;
+                    line-height: 36px;
+                }
+            }
+            p{
+                font-size: 18px;
+                color: #757D95;
+            }
+        }
+        &-bottom{
+            margin-bottom: 100px;
+            @media(max-width: $xl){
+                margin-bottom: 0;
+            }
+            .item{
+                width: 264px;
+                height: 407px;
+                position: relative;
+                @media(max-width: $xl){
+                    display: flex;
+                    width: 100%;
+                    background: #fff;
+                    box-shadow: 0px 20px 80px rgba(33, 42, 68, 0.07);
+                    border-radius: 16px;
+                    padding: 10px;
+                    height: auto;
+                    margin-bottom: 24px;
+                    align-items: center;
+                }
+                .love{
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.3);
+                    backdrop-filter: blur(20px);
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    @media(min-width: $xl){
+                        right: 10px;
+                        top: 10px;
+                    }
+                    @media(max-width: $xl){
+                        right: 10px;
+                        bottom: 10px;
+                        opacity: .8;
+                        backdrop-filter: none;
+                    }
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin: 6px 0 0 6px;
+                    }
+                }
+                .background{
+                    width: 100%;
+                    border-radius: 6px;
+                    @media(max-width: $xl){
+                        width: 102px;
+                        height: 124px;
+                    }
+                    img{
+                        width: 100%;
+                        @media(max-width: $xl){
+                            height: 100%;
+                        }
+                    }
+                }
+                .text{
+                    background: #fff;
+                    width: 100%;
+                    height: 167px;
+                    box-shadow: 0px 20px 80px rgba(33, 42, 68, 0.07);
+                    border-radius: 16px;
+                    padding: 15px;
+                    position: absolute;
+                    bottom:-80px;
+                    @media(max-width: $xl){
+                        position: relative;
+                        bottom:0;
+                        width:197px;
+                        background: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        bottom: 0;
+                        height: auto;
+                        margin-left: 16px;
+                        height: 85px;
+                        margin-bottom: 80px;
+                    }
+                    .in{
+                        width: 32px;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    h3{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #8A8A9A;
+                        margin-bottom: 14px;
+                        background: #F0F2F4;
+                        border-radius: 16px;
+                        padding: 4px 14px;
+                        width: auto;
+                        display: inline-block;
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #757D95;
+                        margin-bottom: 16px;
+                    }
+                    .price{
+                        color: #2B2D33;
+                        font-size: 18px;
+                        @media(max-width: $xl){
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-dua{
+            margin: 150px 0;
+            @media(max-width: $xl){
+                margin: 100px 0;
+            }
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #637381;
+                text-align: center;
+            }
+            .button{
+                text-align: center;
+                margin-top: 50px;
+                button{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    background: #FF7322;
+                    box-shadow: 0px 20px 50px rgba(43, 45, 51, 0.2);
+                    border-radius: 54px;
+                }
+            }
+        }
+    }
+}

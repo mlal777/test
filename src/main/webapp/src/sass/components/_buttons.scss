@@ -1,0 +1,142 @@
+button{
+    font-family: $poppins;
+    padding: 10px 35px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background: #121D44;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none !important;
+    transition: .3s ease;
+    &:active{
+        margin-left: 5px;
+    }
+    &.black{
+        color: #000;
+    }
+}
+.button-mobile{
+    text-align: center;
+    padding: 50px 0 0;
+    position: relative;
+    @media (min-width: $ssm){
+        display: none;
+    }
+    &-business{
+        top: -75px;
+    }
+    &-platform{
+        padding: 50px 0;
+    }
+    &-use{
+        padding: 0;
+        position: absolute;
+        bottom: -100px;
+        left: 45%;
+    }
+    &-what{
+        padding: 0;
+        position: absolute;
+        bottom: -100px;
+        left: 45%;
+    }
+    button{
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: transparent;
+        border: solid 1px #121D44;
+        img{
+            width: 8px;
+        }
+    }
+}
+.scroll-top{
+    position: absolute;
+    bottom: 100px;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #000;
+    border: solid 1px #121D44;
+    @media (max-width: 1400px){
+        display: none;
+    }
+}
+.controller-button{
+    text-align: right;
+    position: relative;
+    button{
+        background: transparent;
+        border: 1px solid #121D44;
+        font-family: $poppins;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin: 0 20px 0;
+        padding: 0;
+        color: #000;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s ease;
+        opacity: .5;
+        &:hover{
+            opacity: 1;
+        }
+        &:first-child{
+            @media (max-width: $sm){
+                margin: 0;
+            }
+        }
+        img{
+            width: 10px !important;
+            height: auto !important;
+        }
+    }
+    &-cases{
+        top: 30px;
+        right: 0;
+        z-index: 99;
+        display: block;
+            @media (min-width: $xl){
+                display: none;
+            }  
+    }
+    &-impact{
+        right: 50px;
+        display: none;
+        @media (min-width: $lg){
+            display: block;
+        }
+        &-mobile{
+            top: 30px;
+            right: 0;
+            display: block;
+            @media (min-width: $lg){
+                display: none;
+            }
+        }
+    }
+    &-work{
+        right: 0;
+        margin: 0 0 0 auto;
+        button{
+            margin: 0 0 0 20px;
+        }
+    }
+    &-about-us{
+        right: 0;
+        bottom: 70px;
+        @media (max-width: $ssm){
+            position: absolute;
+            bottom: 70px;
+            z-index: 99;
+        }
+    }
+}

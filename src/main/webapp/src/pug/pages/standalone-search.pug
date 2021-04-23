@@ -1,0 +1,40 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+      .container 
+        .standalone-hero
+            .text
+                h1 Let’s Help You Make The Right Choice
+        .standalone-search 
+            form(action="")
+              .d-flex.justify-content-center
+                .border
+                  input(type="text", name="", placeholder="Paste the product URL here") 
+                button 
+                  span Search
+                  img(src="./assets/images/icon-search.png", alt="Cartaygo")
+        .standalone-stage 
+            .d-flex.justify-content-between.flex-column.flex-xl-row
+                .item.d-flex.flex-row-reverse.flex-xl-column.align-self-start 
+                    h3 Copy URL 
+                    .number 
+                        p.satu 1
+                .item.d-flex.flex-row-reverse.flex-xl-column.align-self-start
+                    h3 Paste URL 
+                    .number.number-two 
+                        p.dua 2
+                .item.d-flex.flex-row-reverse.flex-xl-column.align-self-start 
+                    h3 Result 
+                    .number.number-three
+                        p.tiga 3
+            .line
+        .standalone-image
+            .d-flex.justify-content-between.flex-column.flex-xl-row
+                img(src="./assets/images/image-1.png", alt="Cartaygo")
+                img(src="./assets/images/image-2.png", alt="Cartaygo")
+                img(src="./assets/images/image-3.png", alt="Cartaygo")

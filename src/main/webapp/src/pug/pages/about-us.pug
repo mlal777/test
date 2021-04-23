@@ -1,0 +1,63 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+      .container
+        .about-us-why
+          .text
+            h1 Why Komb?
+            p The modern world is one of commoditized and nearly indistinguishable products. This reality has now manifested into a shopping experience that is as tedious as it is bad. With more choice at our fingertips than ever before, it is becoming increasingly difficult to land on the right decision when it comes time to select the item in your cart to checkout with. Cartaygo is seeking to explore a new way to compare and buy - One that cuts through the noise and bias to simply give you the options that are right for you.           
+          .image 
+            .d-flex.relative.align-items-center.justify-content-between
+              .item.item-left
+                img(src="./assets/images/about-us-1.png", alt="Cartaygo")
+              .item.item-mid
+                img(src="./assets/images/about-us-2.png", alt="Cartaygo")
+              .item.item-right
+                img(src="./assets/images/about-us-3.png", alt="Cartaygo")
+        .about-us-mission 
+          .text 
+            h1 Our Mission 
+            p Cartaygo was founded with one goal in mind - Get you to the right products to compare so that you can buy confidently. Whether it be a new phone charger for yourself, or a gift for your tech savvy friend, Cartaygo seeks to take a data first approach to tailor your results to the products that are relevant for your needs. 
+              br
+              br
+              | By crunching product information across all of the largest online marketplaces and analyzing millions of user reviews we are able to put recommendations in front of you. Say goodbye to sponsored articles suggesting you buy a worse product so they get paid. Close out those 12 browser tabs you are juggling to compare a few products. Simply drop a URL a watch the magic happen.
+              br
+              br
+            p.black We are your guide in the world of online shopping.
+        .about-us-team 
+          .text 
+            h1 The Team 
+          .about-us-team-bottom.d-flex.justify-content-between.flex-column.flex-xl-row
+            .item
+              .background 
+                img(src="./assets/images/team-1.png", alt="Cartaygo")
+              .text 
+                h3 Ryan Kendall
+                p COO
+                .in
+                  a(href="#")
+                    img(src="./assets/images/linkedin.png", alt="Cartaygo")
+            .item
+              .background 
+                img(src="./assets/images/team-2.png", alt="Cartaygo")
+              .text 
+                h3 Mohammed Hedadji
+                p CEO
+                .in
+                  a(href="#")
+                    img(src="./assets/images/linkedin.png", alt="Cartaygo")
+            .item
+              .background 
+                img(src="./assets/images/team-3.png", alt="Cartaygo")
+              .text 
+                h3 Mangza Lal
+                p CTO
+                .in
+                  a(href="#")
+                    img(src="./assets/images/linkedin.png", alt="Cartaygo")
+        

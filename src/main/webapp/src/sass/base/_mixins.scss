@@ -1,0 +1,41 @@
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* Masonry Mixins */
+@mixin mq($media) {
+  @if $media == sm {
+    @media (min-width: $sm) {@content; }
+  }
+  @else if $media == md {
+    @media (min-width: $md) { @content; }
+  }
+  @else if $media == lg {
+    @media (min-width: $lg) { @content; }
+  }
+  @else {
+    @media only screen and (max-width: #{$media}px) { @content; }
+  }
+}
+
+@mixin masonry($columns,$gutter-size) {
+  $column-width: 100% / $columns - $gutter-size !global;
+  $gutter: (100 - ($columns * $column-width)) / ($columns - 1) !global;
+  .masonry {
+    margin: $gutter 0;
+    .grid-sizer {
+      width: $column-width;
+    }
+    .gutter-sizer {
+      width: $gutter;
+    }
+    .item {
+      width: $column-width; 
+      margin-bottom: $gutter;
+      img {
+        width: 100%;
+      }
+    }  
+  }
+}

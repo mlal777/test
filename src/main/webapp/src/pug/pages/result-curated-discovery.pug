@@ -1,0 +1,172 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+      .container
+        .curated-discovery-hero
+            .d-flex.justify-content-between
+                .curated-discovery-hero-left
+                    .text
+                        h1 Curated Discovery
+                        p Not sure what you are looking to buy? Answer a few questions to help us put some options together for you.
+                    .button 
+                        button Discover now
+                .curated-discovery-hero-right 
+                    .image
+                        img(src="./assets/images/discovery-image.png", alt="Cartaygo")
+        .curated-discovery-card 
+            .bg.bg-5
+            .bg.bg-4
+            .bg.bg-3
+            .bg.bg-2
+            .bg.bg-1
+            .ggp
+                .item
+                    .d-flex.komb-slider
+                        .obj
+                            h2 What type of product are you looking for?
+                            .input 
+                                form(action="")
+                                    input(type="text", name="", placeholder="Type something here")
+                        .obj
+                            h2 What is your price range?
+                            .input 
+                                form(action="").grid
+                                    input(type="text", name="", placeholder="$ 0")
+                                    img(src="./assets/images/arrow-right-long.png", alt="Cartaygo")
+                                    input(type="text", name="", placeholder="$ 2000")
+                        .obj 
+                            h2 What about the product is most important to you?
+                            .input.input-lesm
+                                form(action="").grid-2
+                                    button Brand 
+                                    button Price
+                                    button Quality
+                                    button Strong Review
+                        .obj 
+                            h2 Do you have any preferred shopping places?
+                            .input.input-lesm-2
+                                form(action="").grid-3
+                                    button 
+                                        img(src="./assets/images/shopping-1.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-2.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-3.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-4.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-5.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-6.png", alt="Cartaygo")
+                        .obj 
+                            h2 Do you have any preferred shopping places?
+                            .input
+                                form(action="").select
+                                    select(name="")
+                                        option(value="Choose subategory") Choose subategory
+                                        option(value="Choose subategory") One
+                                        option(value="Choose subategory") Two
+                                        option(value="Choose subategory") Three
+                        .obj 
+                            h2 That’s it! Who said quizzes had to be hard?
+                            p With the preferences you provided, Cartaygo’s tech has curated a list of products from across your favorite e-commerce sites.
+                    .button 
+                        .previous.btn-carousel-prev
+                            button Previous
+                        .dots 
+                            span.active
+                            span 
+                            span
+                            span
+                            span
+                        .next.btn-carousel-next
+                            button Next
+        .curated-discovery-result
+            .text 
+                .d-flex.align-items-end
+                    h1 Curated Results 
+                    p (320 products)
+            .curated-discovery-result-bottom.d-flex.justify-content-between.flex-column.flex-xl-row
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-1.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-2.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-3.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-4.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+            .curated-discovery-result-bottom.d-flex.justify-content-between.flex-column.flex-xl-row
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-1.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-2.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-3.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+                .item
+                    .love 
+                        img(src="./assets/images/love.png", alt="Cartaygo")
+                    .background 
+                        img(src="./assets/images/result-4.png", alt="Cartaygo")
+                    .text 
+                        h3 Kitchen
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        p.price $45.50
+        .curated-discovery-result-dua 
+            p Like a few products above to help us suggest a few more.
+            .button 
+                button Load More
+            

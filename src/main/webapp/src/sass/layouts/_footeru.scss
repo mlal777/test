@@ -1,0 +1,70 @@
+  .footeru {
+    &-bg{
+      background-color: #272727;
+      position: relative;
+      padding: 30px 0;
+      width: 100%;
+      @media (max-width: $ssm){
+        width: 100%;
+        padding: 30px 15px;
+      }
+    }
+    &-term{
+      margin-right: 213px;
+      @media(max-width: $sm){
+          margin-bottom: 50px;
+          margin-right: 0;
+      }
+      p{
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 19px;
+          color: #FFFFFF;
+          &:last-child{
+              font-weight: 500;
+          }
+      }
+    }
+    &-company{
+      margin-right: 98px;
+      @media(max-width: $sm){
+          margin-bottom: 50px;
+      }
+      p{
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 19px;
+          color: #FFFFFF;
+          &:first-child{
+              font-weight: 700;
+          }
+          a{
+              color: #fff;
+          }
+      }
+    }
+    &-community{
+      margin-right: 120px;
+      @media(max-width: $sm){
+          margin-bottom: 50px;
+      }
+      p{
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 19px;
+          color: #FFFFFF;
+          &:first-child{
+              font-weight: 700;
+          }
+          a{
+              color: #fff;
+          }
+      }
+    }
+    &-social-media{
+      img{
+          width: 24px;
+          margin-right: 30px;
+      }
+    }
+  }

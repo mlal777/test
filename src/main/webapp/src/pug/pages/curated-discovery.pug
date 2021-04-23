@@ -1,0 +1,118 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+      .container
+        .curated-discovery-hero
+            .d-flex.justify-content-between.flex-column.flex-xl-row
+                .curated-discovery-hero-left
+                    .text
+                        h1 Curated Discovery
+                        p Not sure what you are looking to buy? Answer a few questions to help us put some options together for you.
+                    .button 
+                        button Discover now
+                .curated-discovery-hero-right 
+                    .image
+                        img(src="./assets/images/discovery-image.png", alt="Cartaygo")
+        .curated-discovery-card 
+            .bg.bg-5
+            .bg.bg-4
+            .bg.bg-3
+            .bg.bg-2
+            .bg.bg-1
+            .ggp
+                .item
+                    .d-flex.komb-slider
+                        .obj
+                            h2 What type of product are you looking for?
+                            .input 
+                                form(action="")
+                                    input(type="text", name="", placeholder="Type something here")
+                        .obj
+                            h2 What is your price range?
+                            .input 
+                                form(action="").grid
+                                    input(type="text", name="", placeholder="$ 0")
+                                    img(src="./assets/images/arrow-right-long.png", alt="Cartaygo")
+                                    input(type="text", name="", placeholder="$ 2000")
+                        .obj 
+                            h2 What about the product is most important to you?
+                            .input.input-lesm
+                                form(action="").grid-2
+                                    button Brand 
+                                    button Price
+                                    button Quality
+                                    button Strong Review
+                        .obj 
+                            h2 Do you have any preferred shopping places?
+                            .input.input-lesm-2
+                                form(action="").grid-3
+                                    button 
+                                        img(src="./assets/images/shopping-1.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-2.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-3.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-4.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-5.png", alt="Cartaygo")
+                                    button
+                                        img(src="./assets/images/shopping-6.png", alt="Cartaygo")
+                        .obj 
+                            h2 Do you have any preferred shopping places?
+                            .input
+                                form(action="").select
+                                    select(name="")
+                                        option(value="Choose subategory") Choose subategory
+                                        option(value="Choose subategory") One
+                                        option(value="Choose subategory") Two
+                                        option(value="Choose subategory") Three
+                        .obj 
+                            h2 That’s it! Who said quizzes had to be hard?
+                            p With the preferences you provided, Cartaygo’s tech has curated a list of products from across your favorite e-commerce sites.
+                    .button 
+                        .previous.btn-carousel-prev
+                            button Previous
+                        .dots 
+                            span.active
+                            span 
+                            span
+                            span
+                            span
+                        .next.btn-carousel-next
+                            button Next
+        .curated-discovery-quizzes
+            .d-flex.justify-content-between.flex-column.flex-xl-row
+                .curated-discovery-quizzes-left
+                    .text 
+                        h1 We Hate Long Quizzes Too 
+                        p Our mission is not to overload you with too many questions or an intrusive quiz. We believe that with a few, simple questions, we can put together a better product recommendation than the big guys. Give our 5-question survey a try, and see for yourself!
+                .curated-discovery-quizzes-right 
+                    .image
+                        img(src="./assets/images/quizzes.png", alt="Cartaygo")
+        .curated-discovery-personalized 
+            .d-flex.justify-content-between.flex-column-reverse.flex-xl-row
+                .curated-discovery-personalized-left 
+                    .image 
+                        img(src="./assets/images/personalized.png", alt="Cartaygo")
+                    .absolute
+                        img(src="./assets/images/personalize-abs-2.png", alt="Cartaygo")
+                        img(src="./assets/images/personalize-abs.png", alt="Cartaygo")
+                .curated-discovery-personalized-right 
+                    .text 
+                        h1 Discover Your Personalized Feed
+                        p We are seeking to reinvent the way that you discover that next gift or that new tech gadget that you have just been craving. No longer do you need to sort through sponsored products or cheap gimmick products - Just give us some information and we can return dozens of products that you did not even think you wanted.
+        .curated-discovery-done
+            .d-flex.justify-content-between.flex-column.flex-xl-row
+                .curated-discovery-done-left 
+                    .text 
+                        h1 How Is It Done?
+                        p We are seeking to reinvent the way that you discover that next gift or that new tech gadget that you have just been craving. No longer do you need to sort through sponsored products or cheap gimmick products - Just give us some information and we can return dozens of products that you did not even think you wanted.
+                .curated-discovery-done-right 
+                    .image 
+                        img(src="./assets/images/done.png", alt="Cartaygo")

@@ -1,0 +1,174 @@
+.about-us{
+    &-why{
+        padding-top: 100px;
+        .text{
+            width: 814px;
+            margin: 0 auto;
+            @media(max-width: $xl){
+                width: 100%;
+            }
+            h1{
+                line-height: 90px;
+                font-size: 60px;
+                margin-bottom: 32px;
+                text-align: center;
+                @media(max-width: $xl){
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 40px;
+                text-align: center;
+                color: #637381;
+            }
+        }
+        .image{
+            width: 100%;
+            margin-top: 60px;
+            .relative{
+                position: relative;
+                @media(max-width: $xl){
+                    padding-top: 205px;
+                }
+                .item{
+                    border-radius: 16px;
+                    img{
+                        filter: drop-shadow(0px 40px 100px rgba(43, 45, 51, 0.15));
+                        width: 100%;
+                    }
+                    &-left{
+                        width: 272px;
+                        @media(max-width: $xl){
+                            width: 160px;
+                        }
+                    }
+                    &-mid{
+                        width: 560px;
+                        margin: 0 16px;
+                        @media(max-width: $xl){
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            margin: 0;
+                        }
+                    }
+                    &-right{
+                        width: 272px;
+                        @media(max-width: $xl){
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-mission{
+        margin-top: 100px;
+        @media(max-width: $xl){
+            margin-top: 80px;
+        }
+        .text{
+            width: 814px;
+            margin: 0 auto;
+            @media(max-width: $xl){
+                width: 100%;
+            }
+            h1{
+                line-height: 110%;
+                font-size: 48px;
+                margin-bottom: 32px;
+                text-align: center;
+                margin-bottom: 60px;
+                @media(max-width: $xl){
+                    font-size: 36px;
+                    line-height: 40px;
+                    margin-bottom: 40px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 40px;
+                text-align: center;
+                color: #637381;
+                margin: 0;
+            }
+            .black{
+                color: #212A44;
+                font-weight: 500;
+            }
+        }
+    }
+    &-team{
+        margin-top: 100px;
+        margin-bottom: 150px;
+        @media(max-width: $xl){
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+        .text{
+            h1{
+                line-height: 110%;
+                font-size: 48px;
+                margin-bottom: 32px;
+                text-align: center;
+                margin-bottom: 80px;
+                @media(max-width: $xl){
+                    font-size: 28px;
+                    line-height: 40px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        &-bottom{
+            .item{
+                width: 349px;
+                height: 509px;
+                position: relative;
+                @media(max-width: $xl){
+                    margin-bottom: 32px;
+                }
+                .background{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .text{
+                    background: #fff;
+                    width: 100%;
+                    height: 187px;
+                    box-shadow: 0px 20px 80px rgba(33, 42, 68, 0.07);
+                    border-radius: 16px;
+                    padding: 30px;
+                    position: absolute;
+                    bottom: 0;
+                    .in{
+                        width: 32px;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    h3{
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: #212A44;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                    p{
+                        font-size: 20px;
+                        line-height: 30px;
+                        font-weight: normal;
+                        color: #757D95;
+                        margin-bottom: 24px;
+                        text-align: center;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

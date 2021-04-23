@@ -1,0 +1,135 @@
+html {
+  @extend %noSpace;
+  height: 100%;
+  ::-webkit-scrollbar{
+    display: none
+  }
+}
+
+body {
+  @extend %noSpace;
+  height: 100%;
+  font-family: $montserrat;
+  font-size: 16px;
+  -moz-osx-font-smoothings: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  &.fixed {
+    @include box(100%, 100%);
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+.main-content {
+  position: relative;
+  min-height: 100vh;
+  &.landing {
+    &:before {
+      @include box(100%, calc(100% - 640px));
+      content: '';
+      position: absolute;
+      top: 640px;
+      left: 0;
+      @media (min-width: $md) {
+        height: calc(100% - 592px);
+        top: 592px;
+      }
+      @media (min-width: $lg) {
+        height: calc(100% - 710px);
+        top: 710px;
+      }
+      @media (min-width: $xl) {
+        height: calc(100% - 780px);
+        top: 780px;
+      }
+    }
+  }
+}
+.container {
+  position: relative;
+  z-index: 1;
+  @media (min-width: $sm) {
+    max-width: calc(100% - 50px);
+  }
+  @media (min-width: $lg) {
+    max-width: calc(100% - 90px);
+  }
+  @media (min-width: $xl) {
+    max-width: 1144px;
+  }
+}
+.container-homepage{
+  position: relative;
+  z-index: 1;
+  @media (min-width: $sm) {
+    max-width: 100%;
+  }
+  @media (min-width: $xl) {
+    max-width: 1230px;
+  }
+}
+.container-user-selector{
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  @media (min-width: $sm) {
+    max-width: calc(100% - 50px);
+  }
+  @media (min-width: $lg) {
+    max-width: calc(100% - 90px);
+  }
+  @media (min-width: $xl) {
+    max-width: 1140px;
+  }
+}
+body{
+  &.stuck-mobile{
+      @media (max-width:$md_mx){
+          .app {
+            height:100vh !important;
+            overflow: hidden;
+          }
+          .grid-section{
+            .container{
+              z-index: auto;
+            }
+          }
+      }
+  }
+}
+h1{
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  @media  (min-width: $md){
+    font-size: 48px;
+    line-height: 53px;
+    color: #121D44;
+  }
+}
+h2{
+  font-family: $poppins;
+}
+h3{
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+p{
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #80838C;
+}

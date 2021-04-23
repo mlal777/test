@@ -1,0 +1,631 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+        .result-hero
+            .result-hero-background
+                img(src="./assets/images/result-hero.png", alt="Cartaygo")
+                .container
+                    .text
+                        h3 Komb Score?
+                        p The Komb score compiles thousands of data points across the largest sites to give you a complete view of what users think of any given product.
+                        a(href="#") See for yourself 
+            .container
+                .button-search 
+                    form(action="")
+                        .d-flex
+                            .border
+                                input(type="text", name="", placeholder="Paste the product URL here") 
+                            button 
+                                span Search
+                                img(src="./assets/images/icon-search.png", alt="Cartaygo")
+        .container 
+            .result-result 
+                .button
+                    button(onclick="changeBG('collapse', 'expand', 'Show', 'Showt', 'Showth', 'Showf', 'none')")#collapse Collapse All 
+                    button(onclick="changeBG('expand', 'collapse', 'Show', 'Showt', 'Showth', 'Showf', 'block')")#expand Expand All
+                .result-result-card 
+                    .your-pick 
+                        img(src="./assets/images/your-pick.png", alt="Cartaygo")
+                    .button-cursor
+                        button.btn-carousel-prev-2 
+                            img(src="./assets/images/left-angle.png", alt="Cartaygo")
+                        button.btn-carousel-next-2 
+                            img(src="./assets/images/right-angle.png", alt="Cartaygo")
+                    .d-flex.content.flex-column.flex-xl-row
+                        .image.d-flex.komb-slider-2
+                            img(src="./assets/images/result.png", alt="Cartaygo")
+                            img(src="./assets/images/our-pick-img.png", alt="Cartaygo")
+                            img(src="./assets/images/best-value-img.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more
+                                button(onclick="Show('Show', 'Less', 'More')").btn-mr#More View More
+                                button(onclick="Hide('Show', 'More', 'Less')").btn-ls#Less View Less
+                        .price
+                            .border 
+                                h3.dollar $29.99
+                                p Amazon Price
+                            .border 
+                                h3.rate 4.3
+                                    span /5
+                    .more-view#Show
+                        .d-flex.justify-content-between.flex-column.flex-xl-row
+                            .rating
+                                h2 Amazon Rating 
+                                .d-flex.margin
+                                    .star 
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                    .numb
+                                        img(src="./assets/images/fi-rr-angle-small.png", alt="Cartaygo")
+                                    p 562
+                            .shipping 
+                                h2 Shipping 
+                                .logo
+                                    img(src="./assets/images/prime.png", alt="Cartaygo")
+                            .brand
+                                h2 Brand
+                                .text 
+                                    p Nike
+                        .description 
+                            h2 Product Description
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra. Senectus non faucibus cursus leo potenti .
+                            h2 Product Details
+                            .description-details
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Product Dimensions
+                                    p 10 x 10 x 6 inches; 8 Ounces
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Item model number
+                                    p BQ3279
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Department
+                                    p Womens
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 ASIN
+                                    p BO7B4GONG
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Amazon Best Sellers Rank 
+                                    p #4, 783 in Clothing, Shoes & Jewelry
+                        .customers
+                            h2 Customers Are Saying
+                            .customers-saying
+                                .d-flex.komb-slider
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful 
+
+            .result-recommendation 
+                .text 
+                    h1 Recommendation For You
+                .result-recommendation-card 
+                    .your-pick
+                        img(src="./assets/images/our-pick.png", alt="Cartaygo")
+                    .button-cursor
+                        button.btn-carousel-prev-3 
+                            img(src="./assets/images/left-angle.png", alt="Cartaygo")
+                        button.btn-carousel-next-3 
+                            img(src="./assets/images/right-angle.png", alt="Cartaygo")
+                    .d-flex.content.flex-column.flex-xl-row
+                        .image.d-flex.komb-slider-3
+                            img(src="./assets/images/our-pick-img.png", alt="Cartaygo")
+                            img(src="./assets/images/result.png", alt="Cartaygo")
+                            img(src="./assets/images/best-value-img.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more
+                                button(onclick="Show('Showt', 'Lesst', 'Moret')").btn-mr#Moret View More
+                                button(onclick="Hide('Showt', 'Moret', 'Lesst')").btn-ls#Lesst View Less
+                        .price 
+                            .border 
+                                h3.dollar $29.99
+                                p Amazon Price
+                            .border 
+                                h3.rate 4.3
+                                    span /5
+                    .more-view#Showt
+                        .d-flex.justify-content-between.flex-column.flex-xl-row
+                            .rating
+                                h2 Amazon Rating 
+                                .d-flex.margin
+                                    .star 
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                    .numb
+                                        img(src="./assets/images/fi-rr-angle-small.png", alt="Cartaygo")
+                                    p 562
+                            .shipping 
+                                h2 Shipping 
+                                .logo
+                                    img(src="./assets/images/prime.png", alt="Cartaygo")
+                            .brand
+                                h2 Brand
+                                .text 
+                                    p Nike
+                        .description 
+                            h2 Product Description
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra. Senectus non faucibus cursus leo potenti .
+                            h2 Product Details
+                            .description-details
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Product Dimensions
+                                    p 10 x 10 x 6 inches; 8 Ounces
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Item model number
+                                    p BQ3279
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Department
+                                    p Womens
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 ASIN
+                                    p BO7B4GONG
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Amazon Best Sellers Rank 
+                                    p #4, 783 in Clothing, Shoes & Jewelry
+                        .customers
+                            h2 Customers Are Saying
+                            .customers-saying
+                                .d-flex.komb-slider
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful     
+
+                .result-recommendation-card 
+                    .your-pick 
+                        img(src="./assets/images/best-value.png", alt="Cartaygo")
+                    .button-cursor
+                        button.btn-carousel-prev-4
+                            img(src="./assets/images/left-angle.png", alt="Cartaygo")
+                        button.btn-carousel-next-4 
+                            img(src="./assets/images/right-angle.png", alt="Cartaygo")
+                    .d-flex.content.flex-column.flex-xl-row
+                        .image.d-flex.komb-slider-4
+                            img(src="./assets/images/best-value-img.png", alt="Cartaygo")
+                            img(src="./assets/images/result.png", alt="Cartaygo")
+                            img(src="./assets/images/our-pick-img.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more
+                                button(onclick="Show('Showth', 'Lessth', 'Moreth')").btn-mr#Moreth View More
+                                button(onclick="Hide('Showth', 'Moreth', 'Lessth')").btn-ls#Lessth View Less
+                        .price 
+                            .border 
+                                h3.dollar $29.99
+                                p Amazon Price
+                            .border 
+                                h3.rate 4.3
+                                    span /5
+                    .more-view#Showth
+                        .d-flex.justify-content-between.flex-column.flex-xl-row
+                            .rating
+                                h2 Amazon Rating 
+                                .d-flex.margin
+                                    .star 
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                    .numb
+                                        img(src="./assets/images/fi-rr-angle-small.png", alt="Cartaygo")
+                                    p 562
+                            .shipping 
+                                h2 Shipping 
+                                .logo
+                                    img(src="./assets/images/prime.png", alt="Cartaygo")
+                            .brand
+                                h2 Brand
+                                .text 
+                                    p Nike
+                        .description 
+                            h2 Product Description
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra. Senectus non faucibus cursus leo potenti .
+                            h2 Product Details
+                            .description-details
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Product Dimensions
+                                    p 10 x 10 x 6 inches; 8 Ounces
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Item model number
+                                    p BQ3279
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Department
+                                    p Womens
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 ASIN
+                                    p BO7B4GONG
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Amazon Best Sellers Rank 
+                                    p #4, 783 in Clothing, Shoes & Jewelry
+                        .customers
+                            h2 Customers Are Saying
+                            .customers-saying
+                                .d-flex.komb-slider
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful     
+                .result-recommendation-card 
+                    .your-pick 
+                        img(src="./assets/images/on-sale.png", alt="Cartaygo")
+                    .button-cursor
+                        button.btn-carousel-prev-5 
+                            img(src="./assets/images/left-angle.png", alt="Cartaygo")
+                        button.btn-carousel-next-5 
+                            img(src="./assets/images/right-angle.png", alt="Cartaygo")
+                    .d-flex.content.flex-column.flex-xl-row
+                        .image.d-flex.komb-slider-5
+                            img(src="./assets/images/our-pick-img.png", alt="Cartaygo")
+                            img(src="./assets/images/result.png", alt="Cartaygo")
+                            img(src="./assets/images/best-value-img.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more
+                                button(onclick="Show('Showf', 'Lessf', 'Moref')").btn-mr#Moref View More
+                                button(onclick="Hide('Showf', 'Moref', 'Lessf')").btn-ls#Lessf View Less
+                        .price 
+                            .border 
+                                h3.dollar $29.99
+                                p Amazon Price
+                            .border 
+                                h3.rate 4.3
+                                    span /5
+                    .more-view#Showf
+                        .d-flex.justify-content-between.flex-column.flex-xl-row
+                            .rating
+                                h2 Amazon Rating 
+                                .d-flex.margin
+                                    .star 
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                        img(src="./assets/images/star.png", alt="Cartaygo")
+                                    .numb
+                                        img(src="./assets/images/fi-rr-angle-small.png", alt="Cartaygo")
+                                    p 562
+                            .shipping 
+                                h2 Shipping 
+                                .logo
+                                    img(src="./assets/images/prime.png", alt="Cartaygo")
+                            .brand
+                                h2 Brand
+                                .text 
+                                    p Nike
+                        .description 
+                            h2 Product Description
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra. Senectus non faucibus cursus leo potenti .
+                            h2 Product Details
+                            .description-details
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Product Dimensions
+                                    p 10 x 10 x 6 inches; 8 Ounces
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Item model number
+                                    p BQ3279
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Department
+                                    p Womens
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 ASIN
+                                    p BO7B4GONG
+                                .d-flex.flex-column.flex-xl-row
+                                    h4 Amazon Best Sellers Rank 
+                                    p #4, 783 in Clothing, Shoes & Jewelry
+                        .customers
+                            h2 Customers Are Saying
+                            .customers-saying
+                                .d-flex.komb-slider
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful
+                                    .item
+                                        .profile.d-flex.align-items-center
+                                            .image 
+                                                img(src="./assets/images/profile.png", alt="Cartaygo")
+                                            .text Laurencia C.
+                                        .rate.d-flex.flex-column.flex-xl-row
+                                            .star 
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                                img(src="./assets/images/star.png", alt="Cartaygo")
+                                            p Love them - this is my 2nd pair 
+                                        .lowhen 
+                                            p Reviewed in the United States on April 5, 2021
+                                        .size.d-flex
+                                            p Size: 8.5
+                                            span |
+                                            p Color: Black
+                                            span |
+                                            p.orange Verified Purchase
+                                        .description
+                                            p   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros a magna aliquam urna blandit. Laoreet at dis fusce vulputate mauris. Maecenas proin mattis libero pharetra.
+                                        .helpful
+                                            p 56 people found this helpful      
+            .result-for-more 
+                h1 Looking for more results? Provide us some additional information below:
+            .curated-discovery-card.for-result
+                .bg.bg-5
+                .bg.bg-4
+                .bg.bg-3
+                .bg.bg-2
+                .bg.bg-1
+                .ggp
+                    .item
+                        .d-flex.komb-slider
+                            .obj
+                                h2 What type of product are you looking for?
+                                .input 
+                                    form(action="")
+                                        input(type="text", name="", placeholder="Type something here")
+                            .obj
+                                h2 What is your price range?
+                                .input 
+                                    form(action="").grid
+                                        input(type="text", name="", placeholder="$ 0")
+                                        img(src="./assets/images/arrow-right-long.png", alt="Cartaygo")
+                                        input(type="text", name="", placeholder="$ 2000")
+                            .obj 
+                                h2 What about the product is most important to you?
+                                .input.input-lesm
+                                    form(action="").grid-2
+                                        button Brand 
+                                        button Price
+                                        button Quality
+                                        button Strong Review
+                            .obj 
+                                h2 Do you have any preferred shopping places?
+                                .input.input-lesm-2
+                                    form(action="").grid-3
+                                        button 
+                                            img(src="./assets/images/shopping-1.png", alt="Cartaygo")
+                                        button
+                                            img(src="./assets/images/shopping-2.png", alt="Cartaygo")
+                                        button
+                                            img(src="./assets/images/shopping-3.png", alt="Cartaygo")
+                                        button
+                                            img(src="./assets/images/shopping-4.png", alt="Cartaygo")
+                                        button
+                                            img(src="./assets/images/shopping-5.png", alt="Cartaygo")
+                                        button
+                                            img(src="./assets/images/shopping-6.png", alt="Cartaygo")
+                            .obj 
+                                h2 Do you have any preferred shopping places?
+                                .input
+                                    form(action="").select
+                                        select(name="")
+                                            option(value="Choose subategory") Choose subategory
+                                            option(value="Choose subategory") One
+                                            option(value="Choose subategory") Two
+                                            option(value="Choose subategory") Three
+                            .obj 
+                                h2 That’s it! Who said quizzes had to be hard?
+                                p With the preferences you provided, Cartaygo’s tech has curated a list of products from across your favorite e-commerce sites.
+                        .button 
+                            .previous.btn-carousel-prev
+                                button Previous
+                            .dots 
+                                span.active
+                                span 
+                                span
+                                span
+                                span
+                            .next.btn-carousel-next
+                                button Next
+
+                            

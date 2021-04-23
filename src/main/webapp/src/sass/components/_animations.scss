@@ -1,0 +1,53 @@
+@keyframes autoScroll {
+  100% {
+    transform: translateX(-1460px);
+  }
+}
+//SIDE NAV
+.fp-viewing-0 .side-navigator #fp-nav ul li:first-child p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-0 .side-navigator #fp-nav ul li:first-child::after{
+  height: 38px;
+}
+
+.fp-viewing-1 .side-navigator #fp-nav ul li:nth-child(2) p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-1 .side-navigator #fp-nav ul li:nth-child(2)::after{
+  height: 38px;
+}
+
+.fp-viewing-2 .side-navigator #fp-nav ul li:nth-child(3) p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-2 .side-navigator #fp-nav ul li:nth-child(3)::after{
+  height: 38px;
+}
+
+.fp-viewing-3 .side-navigator #fp-nav ul li:nth-child(4) p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-3 .side-navigator #fp-nav ul li:nth-child(4)::after{
+  height: 38px;
+}
+
+.fp-viewing-4 .side-navigator #fp-nav ul li:nth-child(5) p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-4 .side-navigator #fp-nav ul li:nth-child(5)::after{
+  height: 38px;
+}
+
+.fp-viewing-5 .side-navigator #fp-nav ul li:nth-child(6) p:last-child{
+  bottom: 0;
+  opacity: 1;
+}
+.fp-viewing-5 .side-navigator #fp-nav ul li:nth-child(6)::after{
+  height: 38px;
+}

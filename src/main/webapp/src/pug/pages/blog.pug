@@ -1,0 +1,89 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+      .container 
+        .blog-hero
+            .d-flex.komb-slider
+                .item
+                    .image
+                        img(src="./assets/images/blog-1.png", alt="Cartaygo")
+                    .text
+                        p Featured 
+                        h2 Lorem ipsum dolor sit amet,  adipiscing elit. 
+                        p Not sure what you are looking to buy? Answer a few questions to help us put some options together for you.
+                .item.item-2
+                    .image
+                        img(src="./assets/images/blog-2.png", alt="Cartaygo")
+        .blog-slider-button
+            button.btn-carousel-prev
+                img(src="./assets/images/arrow-left.png", alt="Cartaygo")
+            button.btn-carousel-next
+                img(src="./assets/images/arrow-right.png", alt="Cartaygo")
+        .blog-all 
+            .text
+                h1 All Blog 
+            .link
+                a(href="#") All Blogs
+                a(href="#") Latest Blogs
+                a(href="#") Reviews
+                a(href="#") How To 
+            .blog-all-grid 
+                .item
+                    .background 
+                        img(src="./assets/images/blg-1.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-1.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-1.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-2.png", alt="Cartaygo")
+                    .text 
+                        h3 Daily Digest
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-2.png", alt="Cartaygo")
+                    .text 
+                        h3 Daily Digest
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-2.png", alt="Cartaygo")
+                    .text 
+                        h3 Daily Digest
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-3.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-3.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet
+                .item
+                    .background 
+                        img(src="./assets/images/blg-3.png", alt="Cartaygo")
+                    .text 
+                        h3 How To
+                        p Lorem ipsum dolor sit amet

@@ -1,0 +1,77 @@
+extends ../layouts/default-layout.pug
+block pageTitle
+  -var title = 'Cartaygo';
+block active
+  -var selected = 'Home';
+block content
+  .main-content.landing-page
+    section
+        .container
+            .show-demo-hero
+                .d-flex.justify-content-between
+                    .image
+                        img(src="./assets/images/how-image.png", alt="Cartaygo")
+                    .text
+                        h1 How We Do It 
+                        p We pull data across all of the largest product marketplaces to consolidate your shopping process into one, easy-to-use platform. Simply paste a product URL into the search bar, and Cartaygo will match your potential purchase against our database to see if it’s the best option for you. If not, we’ll help you find better products to consider.
+                        .button 
+                            button Show Demo Below
+            .show-demo-input
+                .background.d-flex.justify-content-between.align-items-center
+                    form(action="", method="") 
+                        input(type="text", placeholder="Paste the product URL here")
+                    .button 
+                        button 
+                            img(src="./assets/images/icon-search.png", alt="Cartaygo")
+            
+            .expand-view-card 
+                .item
+                    .your-pick 
+                        img(src="./assets/images/on-sale.png", alt="Cartaygo")
+                    .d-flex.content
+                        .image 
+                            img(src="./assets/images/on-sale-img.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more 
+                                button View More
+                        .price 
+                            h3.dollar $29.99
+                            p Amazon Price 
+                            h3.rate 4.3
+                                span /5
+                .item
+                    .your-pick 
+                        img(src="./assets/images/best-value.png", alt="Cartaygo")
+                    .d-flex.content
+                        .image 
+                            img(src="./assets/images/result.png", alt="Cartaygo")
+                        .right
+                            .text
+                                h2 Neque sit ut sociis nibh sit odio orci rhoncus.
+                            .grid
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                                button Easy to clean
+                            .button 
+                                button View at Amazon
+                            .more 
+                                button View More
+                        .price 
+                            h3.dollar $29.99
+                            p Amazon Price 
+                            h3.rate 4.3
+                                span /5
