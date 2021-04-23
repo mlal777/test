@@ -12,6 +12,21 @@
         * {
             box-sizing: border-box;
         }
+        
+        .div-conatiner {
+            background-color: #eeeeee;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .div-conatiner p {
+            margin : 0px;
+        }
+
+        .product {
+            height: 25%;
+            width: 75%;
+        }
 
         #result {
             height: 50%;
@@ -77,8 +92,31 @@
                         product_url: $("#input_id").val(),
                     },
                     success: function(data) {
+                        $("#result").empty();
                         $("#result").css({"text-align": "left"});
-                        $('#result').html(JSON.stringify(data, null, 2));
+                        if (data.amazonProducts == null) {
+                            $('#result').html("Sorry, we could not find any comparable products to this.");
+                        } else {
+                            var products = data.amazonProducts;
+                            var htmlText = '';
+                            
+                            for (i = 0; i < products.length; i++) {
+                                var product = products[i];
+                                htmlText += '<div class="div-conatiner">';
+                                htmlText += '<p> Product Title: ' + product.productTitle + '</p>';
+                                htmlText += '<p> Asin: ' + product.asin + '</p>';
+                                htmlText += '<p> Categories: ' + product.categories + '</p>';
+                                htmlText += '<p> Reviews count: ' + product.countReview + '</p>';
+                                htmlText += '<p> Manufacturer: ' + product.manufacturer + '</p>';
+                                htmlText += '<p> Price: ' + product.price + '</p>';
+                                htmlText += '<p> Retail Price: ' + product.retailPrice + '</p>';
+                                htmlText += '<p> Product description: ' + product.productDescription + '</p>';
+                                htmlText += '<p> Product rating: ' + product.productRating + '</p>';
+                                htmlText += '<p> Amazon Url: ' + product.amazonUrl + '</p>';
+                                htmlText += '</div>';
+                            }
+                            $('#result').append(htmlText);
+                        }
                     },
                     error: function(xhr, statusText) { $('#result').html("Server did not return a response."); }
                 });

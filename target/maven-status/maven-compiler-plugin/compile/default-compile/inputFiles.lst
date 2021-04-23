@@ -1,1 +1,11 @@
 /home/mangzalal/test/src/main/java/com/app/compare/Compare.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/AxessoProductLookUpDTO.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/AmazonProduct.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/ProductDetail.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/StringParsers.java
+/home/mangzalal/test/src/main/java/com/app/compare/scoring/Score.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/Currency.java
+/home/mangzalal/test/src/main/java/com/app/compare/ResponseHelper.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/Variation.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/Review.java
+/home/mangzalal/test/src/main/java/com/app/compare/common/CompareResponse.java
