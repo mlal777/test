@@ -1628,7 +1628,7 @@ footer .copyright p {
       position: relative; }
       @media (max-width: 1200px) {
         .about-us-why .image .relative {
-          padding-top: 205px; } }
+          padding-top: 0px; } }
       .about-us-why .image .relative .item {
         border-radius: 16px; }
         .about-us-why .image .relative .item img {
@@ -1639,21 +1639,24 @@ footer .copyright p {
           width: 272px; }
           @media (max-width: 1200px) {
             .about-us-why .image .relative .item-left {
-              width: 160px; } }
+              width: 160px;
+              display: none } }
         .about-us-why .image .relative .item-mid {
           width: 560px;
           margin: 0 16px; }
           @media (max-width: 1200px) {
             .about-us-why .image .relative .item-mid {
-              position: absolute;
+              position: relative;
               width: 100%;
               top: 0;
               margin: 0; } }
         .about-us-why .image .relative .item-right {
-          width: 272px; }
+          width: 272px;
+         }
           @media (max-width: 1200px) {
             .about-us-why .image .relative .item-right {
-              width: 160px; } }
+              width: 160px;
+              display: none} }
 
 .about-us-mission {
   margin-top: 100px; }
