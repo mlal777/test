@@ -221,7 +221,7 @@ header {
   @media (min-width: 768px) {
     .header-section {
       height: 64px;
-      padding: 30px 0 0 0; } }
+      padding: 0 10px 0 0; } }
 
 .header-container {
   width: 100%;
@@ -234,12 +234,21 @@ header {
 .header-logo {
   position: relative;
   z-index: 9;
-  width: 107px; }
+  width: 300px; }
   @media (max-width: 576px) {
     .header-logo {
-      width: 120px; } }
+      width: 220px; } }
   .header-logo a img {
     width: 100%; }
+
+.logo-sub {
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 .header-menu .nav {
   width: 100%;
@@ -508,13 +517,14 @@ header {
       padding-top: 10px; } }
 
 svg {
-  width: 107px;
+  width: 125px;
   position: relative;
+  overflow:visible;
   top: 10px;
   height: auto; }
   @media (max-width: 576px) {
     svg {
-      width: 90px; } }
+      width: 110px; } }
 
 .cls-1 {
   fill: none;
@@ -531,7 +541,8 @@ svg {
   fill: #fff; }
 
 .cls-4 {
-  font-size: 95.969px; }
+  font-size: 95.969px;
+ }
 
 .cls-4, .cls-5 {
   text-anchor: middle;
@@ -540,6 +551,10 @@ svg {
 
 .cls-5 {
   font-size: 331.375px; }
+
+  .cls-6 {
+    fill: #ff7322;
+  overflow: visible; }
 
 footer .footer-bg {
   background: #181850;
@@ -3625,12 +3640,12 @@ footer .copyright p {
   padding: 0px 0px 80px 50px !important; }
 
 .standalone-hero {
-  padding-top: 120px; }
+  padding-top: 150px; }
   @media (max-width: 1200px) {
     .standalone-hero {
       padding-top: 100px; } }
   .standalone-hero .text {
-    width: 700px;
+    width: 900px;
     margin: 0 auto; }
     @media (max-width: 1200px) {
       .standalone-hero .text {
@@ -3645,6 +3660,29 @@ footer .copyright p {
         .standalone-hero .text h1 {
           font-size: 36px;
           line-height: 48px; } }
+
+
+          .standalone-subheader {
+            padding-top: 1px; }
+            @media (max-width: 1200px) {
+              .standalone-subheader {
+                padding-top: 1px; } }
+            .standalone-subeader .text {
+              width: 900px;
+              margin: 0 auto; }
+              @media (max-width: 1200px) {
+                .standalone-subheader .text {
+                  width: 100%; } }
+              .standalone-subheader .text h1 {
+                font-size: 36px;
+                line-height: 66px;
+                text-align: center;
+                color: #161F3D;
+                letter-spacing: -1.5px; }
+                @media (max-width: 1200px) {
+                  .standalone-subheader .text h1 {
+                    font-size: 32px;
+                    line-height: 48px; } }
 
 .standalone-search {
   margin-top: 50px; }
