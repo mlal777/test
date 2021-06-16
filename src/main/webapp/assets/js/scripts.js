@@ -49,6 +49,31 @@ function Hide(el, ts, tw){
   tw.style.display = "none";
 }
 
+$(document).ready(function () {
+    $(".compareForm").submit(function(e) {
+        e.preventDefault();
+        console.log("Calling compare endpoint");
+        $.ajax({
+            url: "/compare",
+            type: "GET",
+            dataType: "JSON",
+            data: {
+                product_url: $(".inputClass").val(),
+            },
+            success: function(data) {
+            
+                console.log("success");
+                if (window.location.href !== "./result.html") {
+                    window.location.href = "./result.html";
+                }
+            },
+            error: function(xhr, statusText) {
+                console.log("There was an erorr");
+            }
+        });
+    });
+});
+
 (function($){
   "use strict";
   

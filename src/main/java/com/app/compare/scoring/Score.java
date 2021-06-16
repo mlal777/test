@@ -3,7 +3,6 @@ package com.app.compare.scoring;
 import java.util.Set;
 
 import com.app.compare.common.AmazonProduct;
-import com.google.appengine.api.datastore.Entity;
 
 public class Score {
 

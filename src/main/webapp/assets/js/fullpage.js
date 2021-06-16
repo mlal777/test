@@ -707,6 +707,9 @@
             //to prevent scrolling while zooming
             document.addEventListener('keyup', keyUpHandler);
 
+            // on submit call api
+            //document.addEventListener('buttonsubmit', buttonSubmitHandler);
+
             //Scrolls to the section when clicking the navigation bullet
             //simulating the jQuery .on('click') event using delegation
             ['click', 'touchstart'].forEach(function(eventName){
@@ -2393,7 +2396,7 @@
                 }
             }
         }
-        
+
         // changing isWindowFocused to true on focus event
         function focusHandler(){
             isWindowFocused = true;

@@ -1,11 +1,8 @@
 package com.app.compare;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -41,13 +38,14 @@ public class Compare {
         // Instantiates a client
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
         String asin = StringParsers.getAsinFromAmazonUrl(product_url);
+        System.out.println("ASIN is " + asin);
 
         if (asin.isEmpty()) {
             return compareResponse;
         }
         Query<Entity> query = Query.newEntityQueryBuilder()
-                                    .setKind("AmazonProduct")
-                                    .setFilter(PropertyFilter.eq("asin", asin))
+                                    .setKind("AmazonProduct1")
+                                    .setFilter(PropertyFilter.eq("ASIN", asin))
                                     .build();
         QueryResults<Entity> results = datastore.run(query);
         ArrayList<Entity> entities = new ArrayList<>();
@@ -64,38 +62,42 @@ public class Compare {
         Entity resultEntity = entities.get(0);
         AmazonProduct requestedAmazonProduct = ResponseHelper.parseEntityToAmazonProduct(resultEntity);
 
+        /*
         // Get all other entries that share the same categories as the requested Amazon Product.
         Set<String> categorySet = new HashSet<>();
         Set<String> uniqueAsins = new HashSet<>();
         uniqueAsins.add(requestedAmazonProduct.getAsin());
 
-        HashMap<AmazonProduct, Double> allAmazonProducts = new HashMap<AmazonProduct, Double>();
-
         for (String category : requestedAmazonProduct.getCategories()) {
             categorySet.add(category);
-            Query<Entity> categoryQuery = Query.newEntityQueryBuilder()
-                                    .setKind("AmazonProduct")
-                                    .setFilter(PropertyFilter.eq("categories", category))
+        }
+
+        HashMap<AmazonProduct, Double> allAmazonProducts = new HashMap<AmazonProduct, Double>();
+
+        String heroCategory = requestedAmazonProduct.getHeroCategory();
+        Query<Entity> categoryQuery = Query.newEntityQueryBuilder()
+                                    .setKind("AmazonProduct1")
+                                    .setFilter(PropertyFilter.eq("category", heroCategory))
                                     .build();
-            QueryResults<Entity> categoryResults = datastore.run(categoryQuery);
-            while (categoryResults.hasNext()) {
-                Entity returnedEntity = categoryResults.next();
-                String returnedAsin = returnedEntity.getString("asin");
-                if (!uniqueAsins.contains(returnedAsin)) {
-                    uniqueAsins.add(returnedAsin);
-                    AmazonProduct product = ResponseHelper.parseEntityToAmazonProduct(returnedEntity);
-                    if (Score.entitiesShareEnoughCategories(product, categorySet)) {
-                        double priceScore = Score.getEntityPriceScore(product, requestedAmazonProduct.getPrice());
-                        allAmazonProducts.put(product, priceScore);
-                    }
+        QueryResults<Entity> categoryResults = datastore.run(categoryQuery);
+        while (categoryResults.hasNext()) {
+            Entity returnedEntity = categoryResults.next();
+            String returnedAsin = returnedEntity.getString("ASIN");
+            if (!uniqueAsins.contains(returnedAsin)) {
+                uniqueAsins.add(returnedAsin);
+                AmazonProduct product = ResponseHelper.parseEntityToAmazonProduct(returnedEntity);
+                if (Score.entitiesShareEnoughCategories(product, categorySet)) {
+                    double priceScore = Score.getEntityPriceScore(product, requestedAmazonProduct.getPrice());
+                    allAmazonProducts.put(product, priceScore);
                 }
             }
         }
 
-        Map<AmazonProduct, Double> sortByPriceMap = ResponseHelper.sortByValue(allAmazonProducts);
+        Map<AmazonProduct, Double> sortByPriceMap = ResponseHelper.sortByValue(allAmazonProducts);*/
         ArrayList<AmazonProduct> amazonProducts = new ArrayList<>();
         amazonProducts.add(requestedAmazonProduct);
         
+        /*
         // Insert the sorted hashmap into final response
         int maxCount = 3;
         int count = 0;
@@ -105,7 +107,7 @@ public class Compare {
             }
             amazonProducts.add(entry.getKey());
             count++;
-        }
+        }*/
         compareResponse.setAmazonProducts(amazonProducts);
         return compareResponse;
     }

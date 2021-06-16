@@ -47,10 +47,9 @@
                   </svg></a></div>
               <div class="header-menu">
                 <ul class="nav nav-light">
-                  <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Curated Discovery</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Our Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/index.html">Search</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/blog.html">Our Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/about-us.html">About Us</a></li>
                   <div class="header-button">
                     <ul class="d-flex align-items-xl-center flex-column flex-xl-row">
                       <li><a class="notify" href="#"><img src="./assets/images/bell.png" alt="Cartaygo"></a></li>
@@ -77,20 +76,20 @@
                 </div>
               </div>
             </div>
-            <div class="container">
+            <div id= "searchbar-container" class="container">
               <div class="button-search"> 
-                <form action="">
+                <form class="compareForm">
                   <div class="d-flex">
                     <div class="border">
-                      <input type="text" name="" placeholder="Paste the product URL here">
+                      <input type="text" class="inputClass" name="" placeholder="Paste the product URL here">
                     </div>
-                    <button> <span>Search</span><img src="./assets/images/icon-search.png" alt="Cartaygo"></button>
+                    <button type="submit"> <span>Search</span><img src="./assets/images/icon-search.png" alt="Cartaygo"></button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div class="container"> 
+          <div id="result-container" class="container"> 
             <div class="result-result"> 
               <div class="button">
                 <button onclick="changeBG('collapse', 'expand', 'Show', 'Showt', 'Showth', 'Showf', 'none')" id="collapse">Collapse All </button>
@@ -669,89 +668,6 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="result-for-more"> 
-              <h1>Looking for more results? Provide us some additional information below:</h1>
-            </div>
-            <div class="curated-discovery-card for-result">
-              <div class="bg bg-5"></div>
-              <div class="bg bg-4"></div>
-              <div class="bg bg-3"></div>
-              <div class="bg bg-2"></div>
-              <div class="bg bg-1"></div>
-              <div class="ggp">
-                <div class="item">
-                  <div class="d-flex komb-slider">
-                    <div class="obj">
-                      <h2>What type of product are you looking for?</h2>
-                      <div class="input"> 
-                        <form action="">
-                          <input type="text" name="" placeholder="Type something here">
-                        </form>
-                      </div>
-                    </div>
-                    <div class="obj">
-                      <h2>What is your price range?</h2>
-                      <div class="input"> 
-                        <form class="grid" action="">
-                          <input type="text" name="" placeholder="$ 0"><img src="./assets/images/arrow-right-long.png" alt="Cartaygo">
-                          <input type="text" name="" placeholder="$ 2000">
-                        </form>
-                      </div>
-                    </div>
-                    <div class="obj"> 
-                      <h2>What about the product is most important to you?</h2>
-                      <div class="input input-lesm">
-                        <form class="grid-2" action="">
-                          <button>Brand </button>
-                          <button>Price</button>
-                          <button>Quality</button>
-                          <button>Strong Review</button>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="obj"> 
-                      <h2>Do you have any preferred shopping places?</h2>
-                      <div class="input input-lesm-2">
-                        <form class="grid-3" action="">
-                          <button> <img src="./assets/images/shopping-1.png" alt="Cartaygo"></button>
-                          <button><img src="./assets/images/shopping-2.png" alt="Cartaygo"></button>
-                          <button><img src="./assets/images/shopping-3.png" alt="Cartaygo"></button>
-                          <button><img src="./assets/images/shopping-4.png" alt="Cartaygo"></button>
-                          <button><img src="./assets/images/shopping-5.png" alt="Cartaygo"></button>
-                          <button><img src="./assets/images/shopping-6.png" alt="Cartaygo"></button>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="obj"> 
-                      <h2>Do you have any preferred shopping places?</h2>
-                      <div class="input">
-                        <form class="select" action="">
-                          <select name="">
-                            <option value="Choose subategory">Choose subategory</option>
-                            <option value="Choose subategory">One</option>
-                            <option value="Choose subategory">Two</option>
-                            <option value="Choose subategory">Three</option>
-                          </select>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="obj"> 
-                      <h2>That’s it! Who said quizzes had to be hard?</h2>
-                      <p>With the preferences you provided, Cartaygo’s tech has curated a list of products from across your favorite e-commerce sites.</p>
-                    </div>
-                  </div>
-                  <div class="button"> 
-                    <div class="previous btn-carousel-prev">
-                      <button>Previous</button>
-                    </div>
-                    <div class="dots"> <span class="active"></span><span> </span><span></span><span></span><span></span></div>
-                    <div class="next btn-carousel-next">
-                      <button>Next</button>
                     </div>
                   </div>
                 </div>

@@ -5,19 +5,25 @@ import java.util.ArrayList;
 public class AmazonProduct {
     private String productTitle;
     private String asin;
-    private String manufacturer; //soldby
-    private String productRating;
+    private String manufacturer;
     private String productDescription;
     private String amazonUrl;
+    private String salesRank;
+    private String productDimension;
+    private String heroCategory;
+    private String itemModel;
 
-    private int countReview;
-    private double retailPrice;
+    private int numReviews;
     private double price;
+    private double productRating;
 
-    private ArrayList<ProductDetail> productDetails;
+    private boolean isPrime;
+
+    private ArrayList<String> productDetails;
     private ArrayList<Review> productReviews;
     private ArrayList<String> categories;
     private ArrayList<String> imageUrlList;
+    private ArrayList<String> reviewsMention;
 
     public AmazonProduct() {
     }
@@ -25,6 +31,14 @@ public class AmazonProduct {
     // setters
     public void setProductTitle(String productTitle) {
         this.productTitle = productTitle;
+    }
+
+    public void setItemModel(String itemModel) {
+        this.itemModel = itemModel;
+    }
+
+    public void setHeroCategory(String heroCategory) {
+        this.heroCategory = heroCategory;
     }
 
     public void setAsin(String asin) {
@@ -36,7 +50,7 @@ public class AmazonProduct {
         this.manufacturer = manufacturer;
     }
 
-    public void setProductRating(String productRating) {
+    public void setProductRating(double productRating) {
         this.productRating = productRating;
     }
 
@@ -44,19 +58,15 @@ public class AmazonProduct {
         this.productDescription = productDescription;
     }
 
-    public void setCountReview(int countReview) {
-        this.countReview = countReview;
-    }
-
-    public void setRetailPrice(double retailPrice) {
-        this.retailPrice = retailPrice;
+    public void setNumReviews(int numReviews) {
+        this.numReviews = numReviews;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public void setProductDetails(ArrayList<ProductDetail> productDetails) {
+    public void setProductDetails(ArrayList<String> productDetails) {
         this.productDetails = productDetails;
     }
 
@@ -72,9 +82,26 @@ public class AmazonProduct {
         this.imageUrlList = imageUrlList;
     }
 
+    public void setReviewsMention(ArrayList<String> reviewsMention) {
+        this.reviewsMention = reviewsMention;
+    }
+
     public void setAmazonUrl(String amazonUrl) {
         this.amazonUrl = amazonUrl;
     }
+
+    public void setSalesRank(String salesRank) {
+        this.salesRank = salesRank;
+    }
+
+    public void setProductDimension(String productDimension) {
+        this.productDimension = productDimension;
+    }
+
+    public void setIsPrime(boolean isPrime) {
+        this.isPrime = isPrime;
+    }
+
 
      // getters
     public String getProductTitle() {
@@ -90,7 +117,7 @@ public class AmazonProduct {
         return this.manufacturer;
     }
 
-    public String getProductRating() {
+    public double getProductRating() {
         return this.productRating;
     }
 
@@ -98,19 +125,15 @@ public class AmazonProduct {
         return this.productDescription;
     }
 
-    public int getCountReview() {
-        return this.countReview;
-    }
-
-    public double getRetailPrice() {
-        return this.retailPrice;
+    public int getNumReviews() {
+        return this.numReviews;
     }
 
     public double getPrice() {
         return this.price;
     }
 
-    public ArrayList<ProductDetail> getProductDetails() {
+    public ArrayList<String> getProductDetails() {
         return this.productDetails;
     }
 
@@ -122,11 +145,35 @@ public class AmazonProduct {
         return this.categories;
     }
 
-    public ArrayList<String> getImageUArrayList() {
+    public ArrayList<String> getImageUrlList() {
         return this.imageUrlList;
+    }
+
+    public ArrayList<String> getReviewsMention() {
+        return this.reviewsMention;
     }
 
     public String getAmazonUrl() {
         return this.amazonUrl;
+    }
+
+    public String getSalesRank() {
+        return this.salesRank;
+    }
+
+    public String getProductDimension() {
+        return this.productDimension;
+    }
+
+    public boolean getIsPrime() {
+        return this.isPrime;
+    }
+
+    public String getHeroCategory() {
+        return this.heroCategory;
+    }
+
+    public String getItemModel() {
+        return this.itemModel;
     }
 }
